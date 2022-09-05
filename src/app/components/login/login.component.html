@@ -1,0 +1,55 @@
+<div class="container vhcontainer" id="logincontainer">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+           <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-align-center pt-4">
+                <div class="main-logo" id="logomain">
+                    <img src="assets/images/Logo.svg">  
+                </div> 
+                <h3 class="mt-4">Let's get started</h3> 
+                <p class="mt-2 mb-5">
+                    Login or create account to store your password
+                    in your secured valult and save the stress of thinking
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-3">
+                <button class="btn btn-primary btn-custom-sign">Sign up</button>            
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                <button class="btn btn-primary btn-custom-login" (click)='showModal()'>Login</button>
+            </div>
+           </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container vhcontainer" id="loginmodal">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h3 class="mt-4">Login</h3> 
+                    <p class="mt-2 mb-5">
+                        Please enter your Email and Password.
+                        Use a combination of number, characters and alphabets to make
+                        your password strong.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="form-outline  mb-4">
+                        <input type="email" id="typeEmailX" placeholder="Email" #mail (keyup)="onchange(mail.value)" class="form-control form-control-lg form-custom" />                 
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="form-outline mb-4">
+                        <input type="password" id="typePasswordX" placeholder="Password" #password (keyup)="onchangepw(password.value)" class="form-control form-control-lg form-custom" />
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12 justify-content-center mt-5">
+                    <button class="btn btn-lg px-5 btn-custom-sign btn-sign-login" (click)="hideModal()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

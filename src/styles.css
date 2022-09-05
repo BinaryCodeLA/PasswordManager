@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --gray: #262424;
+  --gray-light: #333131;
+  --green: #00b140;
+  --white: #dff6fd;
+  --yellow: #FFAE00;
+  --yellow-gradiant: #3E3926;
+  --greenhover: #37ae62;
+}
+
+body{
+background-color: var(--gray);
+color: var(--white);
+}
+.vhcontainer {
+  height: 80vh;
+ 
+}
+.text-align-center {
+  text-align: center;
+}
+.pt-6 {
+  padding-top: 6rem !important;
+}

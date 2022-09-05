@@ -1,0 +1,91 @@
+.container{
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 25%;
+    margin-bottom: 5%;
+}
+.main-logo {
+    width: 60%;
+    margin: 0 auto;
+}
+.btn-custom-sign {
+    background-color: var(--green);
+    color: var(--white);
+    margin: 0 auto;
+    display: flex;
+    min-width: 90%;
+    justify-content: center;
+    border-color: transparent;
+    line-height: 1.8;
+    border-radius: .55rem;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.btn-sign-login {
+    width: 100%;
+}
+.btn-sign-login:hover {
+    background-color: var(--greenhover);
+} 
+.btn-custom-login {
+    background-color: var(--gray-light);
+    color: var(--white);
+    margin: 0 auto;
+    display: flex;
+    min-width: 90%;
+    justify-content: center;
+    border-color: transparent;
+    line-height: 1.8;
+    border-radius: .55rem;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.btn-custom-login.focus, .btn-custom-login:focus {
+    box-shadow: 0 0 0 .2rem var(--white) !important;
+  }
+  .btn-custom-sign.focus, .btn-custom-sign:focus {
+    box-shadow: 0 0 0 .2rem var(--white) !important;
+  }
+  .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: var(--gray);
+    background-color: var(--white);
+    border-color: var(--gray-light);
+  }
+h3 {
+    font-weight: 800;
+    font-family: Roboto;
+}
+
+p{
+    font-family: Poppins;
+}
+/**Modal Login section*/
+#loginmodal {
+    display: none;
+    position:absolute;
+    left: 5%;
+    top: 0;  
+    z-index: 1;  
+    background-color: var(--gray);
+}
+.form-custom {
+    background-color: var(--gray-light);
+    color: var(--white);
+    font-family: Roboto;
+}
+.form-custom::placeholder {
+    color: var(--white);
+}
+
+.form-custom.focus, .form-custom:focus {
+    box-shadow: 0 0 0 .2rem var(--white) !important;
+}
+
+.form-custom:not(:disabled):not(.disabled).active, .form-custom:not(:disabled):not(.disabled):active, .show > .form-custom.dropdown-toggle {
+    color: var(--gray);
+    background-color: transparent;
+    border-color: var(--gray-light);
+  }

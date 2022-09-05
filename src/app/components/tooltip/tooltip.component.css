@@ -1,0 +1,40 @@
+
+.item-tool {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    width: 25%;
+    text-align: center;
+}
+.item-tool a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1em;
+}
+.main-item {
+    border: 1px solid var( --yellow-gradiant);
+    border-radius: 0.5em;
+    padding: 0.23em;
+    background-color: var( --gray-light);
+}
+
+
+.tool-bar {
+    display: flex;
+    flex-direction: row;
+}
+.icon-archive::before {
+    content: "\f187";
+    font-size: 1.8em;
+}
+.icon-lock::before {
+    content: "\f023";
+    font-size: 1.8em;
+}
+.icon-plus-sign-alt::before {
+    content: "\f0fe";
+    font-size: 1.8em;
+}
+.icon-cog::before {
+    content: "\f013";
+    font-size: 1.8em;
+}
