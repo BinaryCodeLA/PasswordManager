@@ -14,7 +14,7 @@
     border: 1px solid var( --yellow-gradiant);
     border-radius: 0.5em;
     padding: 0.23em;
-    background-color: var( --gray-light);
+    background-color: var( --yellow);
 }
 
 
@@ -22,19 +22,46 @@
     display: flex;
     flex-direction: row;
 }
-.icon-archive::before {
+.fa-archive::before {
     content: "\f187";
     font-size: 1.8em;
+    color: var(--gray-light);
 }
-.icon-lock::before {
+.fa-lock::before {
     content: "\f023";
     font-size: 1.8em;
+    color: var(--gray-light);
 }
-.icon-plus-sign-alt::before {
+.fa-plus-square::before {
     content: "\f0fe";
     font-size: 1.8em;
+    color: var(--gray-light);
 }
-.icon-cog::before {
+.fa-cog::before {
     content: "\f013";
     font-size: 1.8em;
+    color: var(--gray-light);
 }
+
+@media only screen and (min-width:1081px) {
+    .fa-archive::before {
+        content: "\f187";
+        font-size: 2.4em;
+        color: var(--gray-light);
+    }
+    .fa-lock::before {
+        content: "\f023";
+        font-size:  2.4em;
+        color: var(--gray-light);
+    }
+    .fa-plus-square::before {
+        content: "\f0fe";
+        font-size: 2.4em;
+        color: var(--gray-light);
+    }
+    .fa-cog::before {
+        content: "\f013";
+        font-size:  2.4em;
+        color: var(--gray-light);
+    }
+ }

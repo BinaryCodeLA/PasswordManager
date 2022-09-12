@@ -1,8 +1,19 @@
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+  height: 80vh;
+  position: relative;
+
+}
 .container{
     width: 90%;
     max-width: 90%;
     margin: 0 auto;
-    margin-top: 25%;
     margin-bottom: 5%;
 }
 .form-custom {
@@ -33,7 +44,7 @@
 p{
     font-family: Poppins;
 }
-.icon-chevron-left {
+.fa-chevron-left {
     display: inline;
     margin-right: 2%;
 }
@@ -96,6 +107,11 @@ p{
     border-radius: 0.5em;
     border: 1px solid var(--yellow-gradiant);
   }
+  .card-list-item:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color:var(--gray);
+  }
   .card-body {
     flex-direction: row;
   }
@@ -103,9 +119,15 @@ p{
     max-width: 30%;    
   }
   .title {
-    max-width: 60%;
+    max-width: 50%;
     margin-left: 10%;
     flex-direction: column;
+  }
+  .button-flex {
+    max-width: 20%;
+    position: absolute;
+    right: 5%;
+    top: 35%;
   }
   .title h6 {
     width: 100%;
@@ -115,17 +137,185 @@ p{
     font-size: .75em;
   }
 
-  .icon-facebook-sign::before {
+  .fa-facebook-official::before {
     content: "\f082";
     font-size: 2.5em;
   }
 
-  .icon-linkedin-sign::before {
+  .fa-linkedin-square::before {
     content: "\f08c";
     font-size: 2.5em;
   }
 
-  .icon-twitter-sign::before {
+  .fa-twitter-square::before {
     content: "\f081";
     font-size: 2.5em;
+  }
+  .fa-google::before {
+    content: "\f1a0";
+    font-size: 2.5em;
+  }
+  .fa-github::before {
+    content: "\f09b";
+    font-size: 2.5em;
+  }
+  .fa-paypal::before {
+    content: "\f1ed";
+    font-size: 2.5em;
+  }
+  .fa-cloud::before {
+    content: "\f0c2";
+    font-size: 2.5em;
+  }
+  .fa-user-circle::before {
+    content: "\f2bd";
+    font-size: 2.5em;
+  }
+
+  .fa-credit-card::before {
+    content: "\f09d";
+    font-size: 2.5em;
+  }
+
+
+  .fa-chevron-left::before {
+    content: "\f053";
+    font-size: 1.1em;
+  }
+  .fa-chevron-right::before {
+    content: "\f054";
+    font-size: 1.1em;
+  }
+  .icon-ellipsis-vertical::before {
+    content: "\f054";
+    font-size: 1.5em;
+  }
+#vaultcontainer {
+  position:absolute;
+  width: 100%;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.last-item-list {
+  margin-bottom: 30%;
+}
+
+#detail-vault {
+  display: none;
+  position:fixed;
+  padding-top: 25%;
+  left: 5%;
+  height: 100vh;
+  z-index: 1;
+  background: var(--gray);
+  z-index: 0;
+}
+.input-pw-detail {
+  border: 0;
+  background-color: transparent;
+  color: var(--white);
+}
+.input-user-detail {
+  border: 0;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.return-back {
+  width: 100%;
+  color: var(--white);
+}
+.return-back:hover {
+  cursor: pointer;
+}
+.title-detail-value {
+  margin: 0.5em;
+}
+
+.fa-eye-slash {
+  display: none;
+}
+
+.fa-eye-slash::before {
+  content: '\f070';
+  font-size: 1.2em;
+}
+.fa-eye::before {
+  content: '\f06e';
+  font-size: 1.2em;
+}
+.eye-pw:hover {
+  cursor: pointer;
+}
+.fa-files-o::before {
+  content: '\f0c5';
+  font-size: 1.2em;
+}
+.title-detail-value .card:hover {
+  cursor: none;
+}
+.title-detail-value .card .card-body {
+  flex-direction: row;
+  justify-content:center;
+}
+.card-body-password {
+  justify-content: flex-start;
+}
+.input-user-detail, .input-pw-detail {
+  margin-right: 2em;
+}
+#copy-pw {
+  margin-left: 5%;
+}
+.eye-pw:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+.pb-12 {
+  padding-bottom: 12em !important;
+}
+.content-detail-values{
+  width: 100%;
+}
+  @media only screen and (min-width:1081px) {
+    .filter-secundary a {
+      margin-right: 2em;
+      font-family: Poppins;
+      font-size: 1.5vw;
+      color: var(--white);
+      text-decoration:none;
+    }
+    .form-custom {
+      max-width: 40%;
+  }
+   .card-list-item{
+    max-width: 70% !important;
+   }
+   .card-body-password {
+    justify-content: space-around;
+  }
+  .input-user-detail, .input-pw-detail {
+    width: 60%;
+  }
+  #detail-vault{
+    display: none;
+    position:fixed;
+    padding-top: 10% !important;
+    left: 15%;
+    height: 100vh;
+    z-index: 1;
+    background: var(--gray);
+    z-index: 0;
+  }
+  .content-detail-values{
+    width: 70%;
+  }
+  #vaultcontainer {
+    position:absolute;
+    width: 100%;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   }

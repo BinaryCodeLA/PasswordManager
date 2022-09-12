@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tooltip',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tooltip.component.css']
 })
 export class TooltipComponent implements OnInit {
+  idVault?: string
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this.idVault = this.route.snapshot.paramMap.get('id') || ""
   }
 
+  goToVault(){
+    if(sessionStorage.getItem('idtokensuccess') != undefined && sessionStorage.getItem('idtokensuccess') != null)
+        this.router.navigate([`vault/${this.idVault}`])
+    else 
+        this.router.navigate(['login'])
+  }
 }

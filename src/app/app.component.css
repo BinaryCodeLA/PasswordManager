@@ -26,7 +26,7 @@
   }
 
   .toolbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -36,6 +36,7 @@
     background-color: var( --gray-light);
     color: white;
     font-weight: 600;
+    z-index: 1;
   }
 
   .toolbar img {
@@ -47,13 +48,13 @@
     margin: 0 8px;
   }
 
-  .toolbar #youtube-logo {
+  .toolbar #linkedin-logo {
     height: 40px;
     margin: 0 16px;
   }
 
   .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
+  .toolbar #linkedin-logo:hover {
     opacity: 0.8;
   }
 
@@ -120,9 +121,17 @@
     bottom: 0;
     width: 100%;
     padding-bottom: 2%;
+    background-color: var(--gray-light);
   }
-
-  footer span {
+.foot {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+  .foot span {
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -130,10 +139,15 @@
 
   app-tooltip {
     display: block;
-    position: absolute;
-    bottom: 4%;
+    position: fixed;
+    bottom: 0;
     width: 100%;
+    z-index: 1;
+    background-color: var(--yellow);
     display: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 1.5rem 1.5rem 0px 0px;
   }
 
   /* Responsive Styles */
@@ -162,5 +176,19 @@
     svg#rocket-smoke {
       display: none;
       visibility: hidden;
+    }
+  }
+
+
+  @media only screen and (min-width:1081px) {
+    app-tooltip {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: none;
+      padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    border-radius: 1.5rem 1.5rem 0px 0px;
     }
   }

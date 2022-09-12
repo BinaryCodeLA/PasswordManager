@@ -16,7 +16,11 @@ export class OnboardingComponent implements OnInit {
     let logo = document.getElementById("logomain")
     gsap.fromTo(logo,{duration:0.5, scale:1, opacity:0, delay:0.3},{scale:1.3,opacity:1,duration:1.5})
     setTimeout(()=>{
-      this.router.navigate(["login"])
+      if(sessionStorage.getItem('idtokensuccess') != null && sessionStorage.getItem('idtokensuccess') != undefined){
+        let id = sessionStorage.getItem('idtokensuccess')
+        this.router.navigate([`vault/${id}`])
+      }else
+        this.router.navigate(["login"])
     },5000)
   }
 

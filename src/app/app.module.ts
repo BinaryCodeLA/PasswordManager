@@ -7,6 +7,9 @@ import { OnboardingComponent } from './components/onboarding/onboarding.componen
 import { LoginComponent } from './components/login/login.component';
 import { VaultComponent } from './components/vault/vault.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { ClipboardModule } from 'ngx-clipboard'
+import { NgToastModule } from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClipboardModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
