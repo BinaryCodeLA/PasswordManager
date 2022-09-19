@@ -43,3 +43,7 @@ Thumbs.db
 
 src/app/services/provide_folder/encryptdata.json
 src/app/services/provide_folder/data.json
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

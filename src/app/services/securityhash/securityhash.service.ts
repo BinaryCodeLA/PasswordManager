@@ -1,7 +1,6 @@
 import { Injectable, NgModule } from '@angular/core';
-import * as CryptoJS from 'crypto-js';import { environment } from 'src/environments/environment';
- 'crypto-js/sha256';
-
+import * as CryptoJS from 'crypto-js';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -14,16 +13,16 @@ export class SecurityhashService {
   decrypted: any
   constructor() { }
 
-  encrypt = (data: string) => {
+  encrypt =  (data: string) => {
     if(typeof data == "string" ){
       data = data.slice()
-      this.encryptedString = CryptoJS.AES.encrypt(data,this.key, {
+      this.encryptedString =  CryptoJS.AES.encrypt(data,this.key, {
         iv: this.iv,
         mode: CryptoJS.mode.CBC,
         padding: CryptoJS.pad.Pkcs7
       })
     } else {
-      this.encryptedString = CryptoJS.AES.encrypt(JSON.stringify(data), this.key, {
+      this.encryptedString =  CryptoJS.AES.encrypt(JSON.stringify(data), this.key, {
         iv:this.iv,
         mode: CryptoJS.mode.CBC,
         padding: CryptoJS.pad.Pkcs7
@@ -32,9 +31,10 @@ export class SecurityhashService {
     return this.encryptedString.toString()
   }
 
-  decrypt = (hash: string) => {
+  decrypt =  (hash: string) => {
+   
     if(hash.length > 0){
-        this.decrypted = CryptoJS.AES.decrypt(hash, this.key, {
+        this.decrypted =  CryptoJS.AES.decrypt(hash, this.key, {
           iv: this.iv,
           mode: CryptoJS.mode.CBC,
           padding: CryptoJS.pad.Pkcs7

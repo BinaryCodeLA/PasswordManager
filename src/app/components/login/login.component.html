@@ -14,10 +14,10 @@
                 </p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-3">
-                <button class="btn btn-primary btn-custom-sign">Sign up</button>            
+                <button class="btn btn-primary btn-custom-sign" (click)="showModal('signupmodal')">Sign up</button>            
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
-                <button class="btn btn-primary btn-custom-login" (click)='showModal()'>Login</button>
+                <button class="btn btn-primary btn-custom-login" (click)="showModal('loginmodal')">Login</button>
             </div>
            </div>
             
@@ -39,16 +39,50 @@
                 </div>
                 <div class="col-xs-12 col-md-12">
                     <div class="form-outline  mb-4">
-                        <input type="email" id="typeEmailX" placeholder="Email" #mail (keyup)="onchange(mail.value)" class="form-control form-control-lg form-custom" />                 
+                        <input type="email" id="typeEmailX" placeholder="Email*" #mail (keyup)="onchange(mail.value)" class="form-control form-control-lg form-custom" />                 
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12">
                     <div class="form-outline mb-4">
-                        <input type="password" id="typePasswordX" placeholder="Password" #password (keyup)="onchangepw(password.value)" class="form-control form-control-lg form-custom" />
+                        <input type="password" id="typePasswordX" placeholder="Password*" #password (keyup)="onchangepw(password.value)" class="form-control form-control-lg form-custom" />
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12 justify-content-center mt-5">
-                    <button class="btn btn-lg px-5 btn-custom-sign btn-sign-login" (click)="hideModal()">Login</button>
+                    <button class="btn btn-lg px-5 btn-custom-sign btn-sign-login" (click)="hideModal('loginmodal')">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container vhcontainer" id="signupmodal">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h3 class="mt-4">Sign Up</h3> 
+                    <p class="mt-2 mb-5">
+                        Please enter your Email and Password.
+                        Use a combination of number, characters and alphabets to make
+                        your password strong.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="form-outline  mb-4">
+                        <input type="email" id="typeEmailX-sign" placeholder="Email*" #mailsign (keyup)="onchange(mailsign.value,'sign')" class="form-control form-control-lg form-custom" />                 
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="form-outline mb-4">
+                        <input type="password" id="typePasswordX-sign" placeholder="Password*" #passwordsign (keyup)="onchangepw(passwordsign.value,'sign')" class="form-control form-control-lg form-custom" />
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="form-outline mb-4">
+                        <input type="password" id="typePasswordX2-sign" placeholder="Repeat password*" #passwordsign2 (keyup)="onchangepw2(passwordsign2.value)" class="form-control form-control-lg form-custom" />
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12 justify-content-center mt-5">
+                    <button class="btn btn-lg px-5 btn-custom-sign btn-sign-login" (click)="hideModal('signupmodal','sign')">Signup</button>
                 </div>
             </div>
         </div>

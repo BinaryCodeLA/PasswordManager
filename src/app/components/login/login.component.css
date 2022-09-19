@@ -83,6 +83,14 @@ p{
     z-index: 1;  
     background-color: var(--gray);
 }
+#signupmodal{
+    display: none;
+    position:absolute;
+    left: 5%;
+    top: 0;  
+    z-index: 1;  
+    background-color: var(--gray);
+}
 .form-custom {
     background-color: var(--gray-light);
     color: var(--white);

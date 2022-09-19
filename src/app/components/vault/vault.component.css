@@ -211,6 +211,16 @@ p{
   background: var(--gray);
   z-index: 0;
 }
+#detail-vault-save {
+  display: none;
+  position:fixed;
+  padding-top: 25%;
+  left: 5%;
+  height: 100vh;
+  z-index: 1;
+  background: var(--gray);
+  z-index: 0;
+}
 .input-pw-detail {
   border: 0;
   background-color: transparent;
@@ -263,7 +273,7 @@ p{
   justify-content: flex-start;
 }
 .input-user-detail, .input-pw-detail {
-  margin-right: 2em;
+  margin-right: 0.8em;
 }
 #copy-pw {
   margin-left: 5%;
@@ -277,6 +287,36 @@ p{
 }
 .content-detail-values{
   width: 100%;
+}
+.fa-plus-square::before {
+  content: "\f0fe";
+  font-size: 2em;
+}
+.add-cred {
+  display: flex;
+}
+.add-cred .fa-plus-squar:hover {
+  cursor: pointer;
+  color: var(--gray);
+  background-color: var(--white);
+}
+input:focus{
+  outline: none;
+}
+.btn-custom-register {
+  background-color: var(--green);
+  color: var(--white);
+  margin: 0 auto;
+  display: flex;
+  min-width: 25%;
+  justify-content: center;
+  border-color: transparent;
+  line-height: 1.8;
+  border-radius: .55rem;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2em;
 }
   @media only screen and (min-width:1081px) {
     .filter-secundary a {
@@ -308,6 +348,16 @@ p{
     background: var(--gray);
     z-index: 0;
   }
+  #detail-vault-save{
+    display: none;
+    position:fixed;
+    padding-top: 7% !important;
+    left: 15%;
+    height: 100vh;
+    z-index: 1;
+    background: var(--gray);
+    z-index: 0;
+  }
   .content-detail-values{
     width: 70%;
   }
@@ -317,5 +367,8 @@ p{
     top: 0;
     overflow-x: hidden;
     overflow-y: auto;
+  }
+  .input-user-detail, .input-pw-detail {
+    margin-right: 2em;
   }
   }

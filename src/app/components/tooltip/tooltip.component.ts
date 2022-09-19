@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import gsap from "gsap"
 
 @Component({
   selector: 'app-tooltip',
@@ -19,5 +20,10 @@ export class TooltipComponent implements OnInit {
         this.router.navigate([`vault/${this.idVault}`])
     else 
         this.router.navigate(['login'])
+  }
+  onShowDetailInsert(){
+    let detailmodal = document.getElementById("detail-vault-save")
+
+    gsap.fromTo(detailmodal,{x:'-100%', display:'none'},{x:'0%', display:'block'})
   }
 }
